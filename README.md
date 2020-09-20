@@ -1,0 +1,1 @@
+I'm a beginnner. This is a test project where I'm going to try to get the feel for Git and using text editors, et cetera.

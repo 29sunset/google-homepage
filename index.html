@@ -2,26 +2,56 @@
 
 <head>
 
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 .header {
   padding: 10px;
-  text-align: left;
-  color: black;
+  color: #353535;
   font-size: 16px;
+  flex-direction: row;
   font-family: sans-serif;
+  justify-content: space-between;
 }
 
 .header a {
-    color:black;
+    color: #353535;
     text-decoration: none;
 }
 
 .header a:hover {
-    color:black;
+    color: #353535;
     text-decoration: underline;
 }
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.footer {
+  flex-direction: row;
+  background: #dddddd;
+  padding: 10px;
+  color: #353535;
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 1.75rem;
+}
+
+.footer a {
+    color: #353535;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #353535;
+    text-decoration: underline;
+
+}
+
 
 ul {
   list-style-type: none;
@@ -31,16 +61,38 @@ ul {
 
 li {
   display: inline;
+  margin: 1.2em;
+}
+
+.hf-l {
+  float: left;
+}
+
+.hf-r {
+  float: right;
 }
 
 img {
     padding:12em 0px 2em 0px;
 }
 
-.center {
+.logocenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.inputcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow .3s;
+  border-radius:10px;
+  border: 1px solid #ccc;
+}
+
+.inputcenter:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 input {
@@ -49,32 +101,34 @@ max-width:700px;
 margin-left: auto;
 margin-right: auto;
 font-size: 16px;
-border: 1px solid #d3d3d3;
+border: 1px solid #e6e6e6;
 border-radius: 24px;
 outline: none;
 padding: 12px 20px;
 }
 
+
 button {
-  background-color: #d3d3d3;
-  border: none;
-  color: black;
-  padding: 16px 32px;
+  background-color: #e6e6e6;
+  border: solid transparent 1px;
+  color: #353535;
+  padding: 6px 8px;
   margin: 16px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  border-radius: 16px;
+  border-radius: 4px;
   outline: none;
+}
+
+button:hover {
+  border: solid 1px;
+  border-color: #9c9c9c;
 }
 
 .btn-group {
   display: flex;
   justify-content: space-between;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none;
 }
 
 #centered-buttons {
@@ -83,25 +137,42 @@ justify-content: center;
 }
 
 </style>
-
+</head>
 <body>
-
+<header>
     <div class="header">
 
-        <ul>
+        <ul class="hf-l">
             <li><a href="/about">About</a></li>
-            <li><a href="/store">Store</a></li>
+            <li><a href="/store">Store</a></li></ul>
+        <ul class="hf-r">
+            <li><a href="/gmail">Gmail</a></li>
+            <li><a href="/images">Images</a></li>
           </ul> 
       </div>
+</header>
 
-
-<img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-<form action="search"><input class="center" type=text></form>
+<img class="logocenter" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+<form action="search"><input class="inputcenter" type=text></form>
 <div class="btn-group" id="centered-buttons">
   <button>Google Search</button>
   <button>I'm Feeling Lucky</button>
 </div>
+<footer id="footer">
+  <div class="footer">
 
+    <ul class="hf-l">
+        <li><a href="/advertising">Advertising</a></li>
+        <li><a href="/business">Business</a></li>
+        <li><a href="/how-search-works">How Search Works</a></li></ul>
+    
+    <ul class="hf-r">
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/settings">Settings</a></li>
+      </ul> 
+  </div>
+</footer>
 
 </body>
 
